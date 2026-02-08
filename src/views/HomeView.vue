@@ -8,6 +8,9 @@
           <Button @click="showCreatePost = true" size="sm">
             Create Post
           </Button>
+          <Button @click="router.push('/account')" variant="outline" size="sm">
+            Account
+          </Button>
           <Button @click="handleLogout" variant="outline" size="sm">
             Logout
           </Button>
