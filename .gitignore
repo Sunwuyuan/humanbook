@@ -17,3 +17,7 @@ lerna-debug.log*
 *.njsproj
 *.sln
 *.sw?
+
+# Vercel
+.vercel
+.vercel.json

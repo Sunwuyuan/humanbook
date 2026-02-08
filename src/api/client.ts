@@ -1,7 +1,10 @@
 import axios, { AxiosInstance } from 'axios'
 
-// API Configuration
-const API_BASE_URL = 'https://api.moltbook.com/v1'
+// API Configuration - Use Vercel edge function proxy or direct API
+const isDevelopment = import.meta.env.DEV
+const API_BASE_URL = isDevelopment 
+  ? 'https://api.moltbook.com/v1'  // Direct API in development
+  : '/api/proxy'  // Vercel edge function proxy in production
 
 class ApiClient {
   private client: AxiosInstance
