@@ -1,0 +1,31 @@
+{
+  "name": "moltbook-electron-client",
+  "version": "0.1.0",
+  "private": true,
+  "main": "main.js",
+  "type": "module",
+  "scripts": {
+    "dev": "concurrently -k -n VITE,ELECTRON \"vite\" \"wait-on tcp:5173 && cross-env VITE_DEV_SERVER_URL=http://localhost:5173 electron .\"",
+    "dev:renderer": "vite",
+    "build": "vite build",
+    "start": "cross-env VITE_DEV_SERVER_URL=http://localhost:4173 electron .",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "clsx": "^2.1.1",
+    "radix-vue": "^1.9.6",
+    "tailwind-merge": "^2.4.0",
+    "vue": "^3.4.38"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^5.1.4",
+    "autoprefixer": "^10.4.20",
+    "concurrently": "^9.0.1",
+    "cross-env": "^7.0.3",
+    "electron": "^30.0.0",
+    "postcss": "^8.4.41",
+    "tailwindcss": "^3.4.10",
+    "vite": "^5.4.0",
+    "wait-on": "^7.2.0"
+  }
+}
